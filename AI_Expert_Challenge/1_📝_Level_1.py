@@ -32,7 +32,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.subheader(":bar_chart: DataSet")
 
-df = pd.read_csv('/AI_Expert_Challenge/ecommerce_customer_behavior_dataset.csv')
+df = pd.read_csv('AI_Expert_Challenge/ecommerce_customer_behavior_dataset.csv')
 st.dataframe(df)
 
 mean_mode_median_col, col2 = st.columns(2)
