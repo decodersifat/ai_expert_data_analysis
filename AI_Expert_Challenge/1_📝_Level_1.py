@@ -7,6 +7,23 @@ import plotly.graph_objs as go
 
 
 st.set_page_config(page_title="AI Expert Challenge !!!", page_icon=":pencil2:", layout="wide")
+
+
+page_bg_img = f"""
+<style>
+[data-testid="stAppViewContainer"] 
+{
+    background-color:#011516
+}
+</style>
+"""
+
+
+st.markdown(page_bg_img, unsafe_allow_html=True)
+
+
+
+
 st.markdown(
     """
     <h1 style='text-align: center;'>Team: Coding Slug</h1>
