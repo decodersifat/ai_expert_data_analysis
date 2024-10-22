@@ -9,32 +9,6 @@ import plotly.graph_objs as go
 st.set_page_config(page_title="AI Expert Challenge !!!", page_icon=":pencil2:", layout="wide")
 
 
-page_bg_img = f"""
-<style>
-[data-testid="stAppViewContainer"] > .main {{
-background-image: url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
-background-size: 180%;
-background-position: top left;
-background-repeat: no-repeat;
-background-attachment: local;
-}}
-
-
-
-[data-testid="stHeader"] {{
-background: rgba(0,0,0,0);
-}}
-
-[data-testid="stToolbar"] {{
-right: 2rem;
-}}
-</style>
-"""
-
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
-
-
 
 
 st.markdown(
@@ -89,7 +63,7 @@ with mean_mode_median_col:
     fig.update_layout(
         title={
             'text': 'Mean, Median, and Mode Calculation on Age',
-            'font': dict(size=15, color='white'),
+            'font': dict(size=15),
             'x': 0.2
         },
         paper_bgcolor=None,
