@@ -54,11 +54,11 @@ fig = px.bar(
 fig.update_layout(
     title=dict(
         text='Average Review Scores of Users by Payment Method',
-        font=dict(size=18, color='white'),
+        font=dict(size=18),
         x=0.2  # Center the title
     ),
-    plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
-    paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent paper background
+    plot_bgcolor='rgba(0, 0, 0, 0)',
+    paper_bgcolor='rgba(0, 0, 0, 0)', 
     xaxis_title='Payment Method',
     yaxis_title='Average Review Score (1-5)',
     font=dict(size=12)
@@ -97,7 +97,7 @@ fig = px.pie(
 fig.update_layout(
     title=dict(
         text='Percentage of Satisfied (Rating 4 or 5) & Return Customers',
-        font=dict(size=18, color='white'),
+        font=dict(size=18),
         x = 0.25
     ),
     showlegend=True
@@ -244,7 +244,7 @@ fig.add_annotation(
 fig.update_layout(
     title=dict(
         text='Average Purchase Amount by Location',
-        font=dict(size=18, color='white'),
+        font=dict(size=18),
         x=0.1  # Center the title
     ),
     plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
