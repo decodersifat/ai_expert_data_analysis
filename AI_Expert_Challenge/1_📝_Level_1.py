@@ -197,16 +197,16 @@ top_three_products = df_categories.head(3)
 with col_top_three_horizontal:
     fig = px.bar(
         df_categories, 
-        y='Product Category',  # Swap 'x' and 'y' for horizontal bar chart
-        x='Number of Items Purchased',  # Use 'Number of Items Purchased' as the x-axis
+        y='Product Category', 
+        x='Number of Items Purchased',  
         text='Number of Items Purchased',
-        color='Product Category',  # Use different colors for each category
-        color_discrete_sequence=px.colors.qualitative.Set2  # A visually appealing color scheme
+        color='Product Category',  
+        color_discrete_sequence=px.colors.qualitative.Set2  
     )
     # Customize the layout for a more appealing look
     fig.update_layout(
-        plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
-        paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent paper background
+        plot_bgcolor='rgba(0, 0, 0, 0)',  
+        paper_bgcolor='rgba(0, 0, 0, 0)',  
         font=dict(size=12), 
         xaxis=dict(
             showgrid=True,
@@ -237,13 +237,13 @@ with con_top_three_vertical:
         color='Product Category',  # Use different colors for each category
         color_discrete_sequence=px.colors.qualitative.Set2  # A visually appealing color scheme
     )
-    # Customize the layout for a more appealing look
+    
     fig.update_layout(
-        plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
-        paper_bgcolor='rgba(0, 0, 0, 0)',  # Transparent paper background
-        font=dict(size=12),  # General font size for the chart
+        plot_bgcolor='rgba(0, 0, 0, 0)', 
+        paper_bgcolor='rgba(0, 0, 0, 0)',
+        font=dict(size=12), 
         xaxis=dict(
-            showgrid=False,  # Remove gridlines for x-axis
+            showgrid=False, 
             title_text='Product Category'
         ),
         yaxis=dict(
@@ -362,12 +362,12 @@ with col_avg_delivary:
         )
     )
 
-    # Further customize layout for a polished look
+    
     fig.update_layout(
         title=dict(
             text="Average Delivery Time by Subscription Status",
-            font=dict(size=18, color='white'),
-            x=0.2,  # Center the title
+            font=dict(size=18),
+            x=0.2, 
         ),
         annotations=[
             dict(
@@ -423,7 +423,7 @@ with col_paid_users:
     fig.update_layout(
         title=dict(
             text='Customer Count by Subscription Status',
-            font=dict(size=18, color='white'),
+            font=dict(size=18),
             x=0.2  # Center the title
         ),
         xaxis=dict(
@@ -473,13 +473,13 @@ with col_device:
         go.Pie(
             labels=device_types,
             values=percentages,
-            hole=0.4,  # Donut shape
+            hole=0.4, 
             marker=dict(
                 colors=['#1f77b4', '#ff7f0e', '#2ca02c'],
                 line=dict(color='black', width=2)
             ),
-            textinfo='label',  # Show both label and percentage
-            hoverinfo='label+percent+value',  # Display label, percentage, and value on hover
+            textinfo='label', 
+            hoverinfo='label+percent+value',
             textfont=dict(size=14)
         )
     )
@@ -488,7 +488,7 @@ with col_device:
     fig.update_layout(
         title=dict(
             text='Device Type Usage for Purchases',
-            font=dict(size=18, color='white'),
+            font=dict(size=18),
             x=0.2  # Center the title
         ),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
@@ -501,7 +501,7 @@ with col_device:
     st.plotly_chart(fig)
 
 with col_avg_purchase:
-    # Data for average purchase amount
+    
     avg_purchase_amount = df.groupby('Discount Availed')['Purchase Amount ($)'].mean().reset_index()
 
     # Create labels for availed and not availed
@@ -521,7 +521,7 @@ with col_avg_purchase:
     fig.update_layout(
         title=dict(
             text='Average Purchase Amount for Discount vs No Discount',
-            font=dict(size=18, color='white'),
+            font=dict(size=18),
             x=0.1  # Center the title
         ),
         plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
@@ -562,7 +562,7 @@ fig = px.bar(
 fig.update_layout(
     title=dict(
         text='Most Common Payment Methods Used by Customers',
-        font=dict(size=18, color='white'),
+        font=dict(size=18),
         x=0.3  # Center the title
     ),
     plot_bgcolor='rgba(0, 0, 0, 0)',  # Transparent background
